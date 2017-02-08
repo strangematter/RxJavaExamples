@@ -108,7 +108,7 @@ public class RxExamplesActivity extends AppCompatActivity {
                 .flatMap(voids -> {
                     int clicks = voids.size();
                     mClickResultText.setText(clicks + " clicks/s");
-                    if (clicks < 3) {
+                    if (clicks <= 3) {
                         return Flowable.just("Not impressive...");
                     } else if (clicks > 3 && clicks <= 6) {
                         return Flowable.just("You can do better!");
